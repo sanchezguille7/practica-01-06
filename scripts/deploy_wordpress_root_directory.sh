@@ -30,7 +30,7 @@ rm -rf /var/www/html/*
 #movemos el contenido de /tmp/wordpress a /var/www/html
 mv -f /tmp/wordpress/* /var/www/html
 
-#Creamos la base de datos y el usuario de la base de datos
+# Creamos la base de datos y el usuario de la base de datos
 mysql -u root <<< "DROP DATABASE IF EXISTS $WORDPRESS_DB_NAME"
 mysql -u root <<< "CREATE DATABASE $WORDPRESS_DB_NAME"
 mysql -u root <<< "DROP USER IF EXISTS $WORDPRESS_DB_USER@$IP_CLIENTE_MYSQL"

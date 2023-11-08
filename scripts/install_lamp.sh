@@ -12,6 +12,8 @@ apt update
 #instalamos el servidor web Apache
 apt install apache2 -y
 
+# 
+cp ../conf/000-default.conf /etc/apache2/sites-available/000-default.conf
 
 #Instalar  el sistema gestor de datos MySQL
 apt install mysql-server -y

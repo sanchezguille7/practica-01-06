@@ -48,3 +48,12 @@ sed -i "s/localhost/$WORDPRESS_DB_HOST/" /var/www/html/wp-config.php
 
 # Cambiamos el dueño
 chown -R www-data:www-data /var/www/html/
+
+# Ahora tendremos que crear un archivo .htaccess en el directorio /var/www/html
+cp ../htaccess/.htaccess /var/www/html/
+
+# Habilitamos el módulo mod_rewrite de Apache.
+a2enmod rewrite
+
+# Reiniciamos el servicio apache
+systemctl restart apache2
